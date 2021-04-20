@@ -1,0 +1,132 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: #f3f3f3;
+    padding: 0px 20px;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+h1{
+    margin: 15px 0px;
+}
+.program{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+        flex-direction: row;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+        justify-content: space-between;
+    width: 100%;
+}
+.program-filter{
+    width: 18%;
+    background-color: #fff;
+    padding: 10px;
+    height: fit-content;
+}
+.program-filter .text{
+    font-size: 18px;
+    display: block;
+    font-weight: 600;
+}
+.program-filter .sub-text{
+    display: block;
+    border-bottom: 1px solid #ccc;
+    width: fit-content;
+    margin: 6px auto;
+    text-align: center;
+}
+
+input[type="radio"] {
+  display:none;
+}
+
+label {
+  padding: 1em;
+  display: inline-block;
+  background-color: rgb(178, 215, 130);
+  cursor: pointer;
+  color: #1b1b1b;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    width: 34%;
+    text-align: center;
+}
+input[type="radio"]:checked + label {
+  background-color: rgb(76, 133, 2);
+  color: #1b1b1b;
+}
+.program-list{
+    width: 80%;
+  display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+        flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+        justify-content: space-between;
+}
+.program-list .grid{
+    width: 24%;
+    background-color: #fff;
+    padding: 10px;
+    margin: 0px 5px 10px 5px;
+    box-sizing: border-box;
+    height: fit-content;
+}
+.product-img{
+    background-color: #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.product-img img{
+    width: 100%;
+}
+.product-img + div{
+    margin: 10px 0px;
+}
+@media (max-width: 1024px){
+    .program-list{
+    width: 75%;
+}
+    .program-list .grid{
+        width: 48%;
+    }
+    .program-filter{
+        width: 24%;
+    }
+
+}
+@media (max-width: 700px){
+    .program{
+        flex-direction: column;
+    }
+    .program-filter{
+        width: 100%;
+    }
+    .program-list{
+        width: 100%;
+        flex-direction: column;
+    }
+    .program-list .grid{
+        width: 100%;
+    }
+    .program-filter button{
+        width: 49%;
+    }
+}
